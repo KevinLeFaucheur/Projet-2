@@ -2,32 +2,63 @@ body
 {
     font-family: "Raleway", sans-serif;
     font-weight: 300;
+    margin: 0;
+}
+
+h1
+{
+    font-size: 12px;
+}
+
+h2
+{
+    font-size: 10px;
+}
+
+h3
+{
+    font-size: 10px;
+}
+
+p
+{
+    font-size: 8px;
+    font-weight: 500;
 }
 
 /* Header */
+
 nav
 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 nav img
 {
-    height: 80px;
+    margin: 10px 0 0 4%;
+    height: 25px;
 }
 
 nav ul
 {
     display: flex;
     list-style: none;
-    height: 100%;
     margin: 0;
 }
 
 nav li
 {
-    margin: 0 20px 0 20px;
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+nav li:hover
+{
+    border-top: solid 1px #0065FC;
 }
 
 nav a
@@ -41,7 +72,7 @@ nav a:visited
     text-decoration: none;
 }
 
-nav a:active
+nav a:hover
 {
     color: #0065FC;
     text-decoration: none;
@@ -54,30 +85,68 @@ main
     margin: 0 3% 0 3%;
 }
 
+#locate-form
+{
+    display: flex;
+    justify-content: start;
+    height: 25px;
+}
+
+#locate-form-icon
+{
+    width: 25px;
+    text-align: center;
+    vertical-align: bottom;
+    background-color: #F2F2F2;
+    border-radius: 7px 0 0 7px;
+}
+
 #locate-form i
 {
-    border-radius: 50% 0 0 50%;
-    background-color: #F2F2F2;
     padding: 5px;
-    font-size: 12px;
+    font-size: 8px;
 }
 
 #locate-form input
 {
-    border: solid 0px 1px #F2F2F2;
+    border: solid 1px #F2F2F2;
+    font-size: 8px;
+    font-weight: 700;
 }
 
-#locate-filter
+#locate-form input:nth-of-type(2)
+{
+    color: white;
+    border: solid 1px #F2F2F2;
+    background-color: #0065FC;
+    border-radius: 0 7px 7px 0;
+    font-weight: 500;
+}
+
+#locate-filters-block
+{
+    display: flex;
+    margin: 10px 0 15px 0;
+}
+
+#locate-filters
+{
+    display: flex;
+    align-items: center;
+}
+
+#locate-filter-item
 {
     display: flex;
     box-sizing: content-box;
-    width: fit-content;
     height: 25px;
-    margin: 0;
+    margin: 0 5px 0 0;
 }
 
 #locate-filter-icon
 {
+    position: relative;
+    left: 10px;
     width: 25px;
     background-color: #DEEBFF;
     border: solid 2px #DEEBFF;
@@ -86,21 +155,46 @@ main
     vertical-align: bottom;
 }
 
-#locate-filter i
+#locate-filter-item i
 {
     color: #0065FC;
-    font-size: 12px;
+    font-size: 10px;
 }
 
-#locate-filter p
+#locate-filter-item p
 {
     margin: 0;
-    padding: 2px;
-    text-align: center;
-    vertical-align: bottom;
+    padding: 0 10px 0 15px;
     border: solid 2px #F2F2F2;
     border-radius: 0 25px 25px 0;
     border-left: none;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+#locate-info
+{
+    display: flex;
+    margin: 15px 0 15px 0;
+}
+
+#locate-info-bubble
+{
+    width: 12px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: bottom;
+    border: solid 1px #F2F2F2;
+    color: #0065FC;
+    border-radius: 25px;
+    font-size: 8px;
+}
+
+#locate-info p
+{
+    margin: 0;
 }
 
 /* Hébergements */
