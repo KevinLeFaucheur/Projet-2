@@ -3,7 +3,7 @@
         <head>
             <title>Booki</title>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <!-- <link rel="normalizer" href="css/normalize.css"> -->
             <link rel="stylesheet" href="css/style.css">
 
@@ -19,10 +19,10 @@
             <header>
                 <nav>
                     <img src="./images/logo/logo.png" alt="logo">
-                    <div>
+                    <div id="nav-buttons">
                         <ul>
-                            <li><a href="#lodging">Hébergements</a></li>
-                            <li><a href="#activities">Activités</a></li>
+                            <li><a href="#lodging"><p>Hébergements</p></a></li>
+                            <li><a href="#activities"><p>Activités</p></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -39,7 +39,8 @@
                         <!-- Locate form -->
                             <div id="locate-form-icon"><i class="fa-solid fa-location-dot"></i></div>
                             <input type="text" name="" placeholder="Marseille, France"/>
-                            <input type="button" value="Rechercher"/>
+                            <input id="value" type="button" value="Rechercher"/>
+                            <input id="icon" type="button" value=""/><span class="fa-solid fa-magnifying-glass"></span>
                         </form>
                     </div>
                     <div id="locate-filters-block">
