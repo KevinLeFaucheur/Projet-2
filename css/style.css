@@ -383,9 +383,8 @@ main
 #activities-card-holder .card
 {
     flex-direction: column;
-    height: 45%;
     width: 23%;
-    padding: 0;
+    height: 49%;
 }
 
 #activities-card-holder .card a
@@ -395,13 +394,25 @@ main
     justify-content: space-between;
 }
 
-#activities-card-holder img
+#activities-card-holder .card-title
 {
-    height: 100px;
+    height: 30px;
 }
 
-#activities-card-holder .card:nth-child(1) { height: 100% }
-#activities-card-holder .card:nth-child(4) { height: 100%; }
+#activities-card-holder .card-image
+{
+    height: 80%;
+}
+
+#activities-card-holder img
+{ 
+    height: 100%;
+    object-fit:cover;
+}
+
+#activities-card-holder .card:nth-child(3n-2) { height: 100%; }
+
+#activities-card-holder .card:nth-child(3n-2) .card-image { height: 100%; /*background-color: red;*/}
 
 /* Footer */
 
@@ -414,7 +425,7 @@ footer
 
 .footer-element
 {
-    margin: 0 30px 0 0;
+    margin-right: 25%;
 }
 
 .footer-element ul
@@ -440,7 +451,34 @@ footer
 /* Mobiles */
 @media screen and (max-width: 768px) 
 {
-    
+    nav
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    #top-half-block
+    {
+        flex-direction: column;
+    }
+    #lodging, #popularity
+    {
+        width: 100%;
+    }
+
+    #popularity
+    {
+        order: -1;
+    }
+
+    #lodging-card-holder
+    {
+        flex-direction: column;
+    }
+
+    footer
+    {
+        flex-direction: column;
+    }
 }
 
 /* Tablettes */
