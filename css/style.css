@@ -531,23 +531,24 @@ footer
         height: 25%;
     }
 
-    nav #nav-buttons
-    {
-        align-self: stretch;
+    nav #nav-buttons { align-self: stretch; }
+
+    nav ul 
+    { 
+        justify-content: stretch;
+        padding: 0;
     }
 
-    nav ul li
-    {
-        margin-left: -40px;
-    }
-
-    nav ul li
+    nav a 
     {
         width: 100%;
     }
 
+    nav ul a li { width: 100%; }
+
     nav li
     {
+        width: 100%;
         display: flex;
         justify-content: center;
         border-top: 0;
@@ -630,12 +631,13 @@ footer
 
     #locate-form span
     { 
+        width: 0;
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        right: 10vw;
+        right: 9vw; /* half icon width + pos right 7 + 2 */ 
         font-size: 4vw;
     }
 
