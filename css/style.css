@@ -70,6 +70,9 @@ nav a:hover
 
 main { margin: 0 3vw; }
 
+#locate h1 { margin-bottom: 0.7vw; }
+#locate-p { margin-top: 0.7vw; }
+
 #locate-form
 {
     display: flex;
@@ -95,7 +98,12 @@ main { margin: 0 3vw; }
     padding-left: 1vw;
 }
 
-#locate-form input::placeholder { color: black; }
+#locate-form input[type=text]:focus 
+{
+  border: 3px solid #F2F2F2;
+}
+
+#locate-form button::placeholder { color: black; }
 
 #locate-form #value, #icon
 {
@@ -103,7 +111,8 @@ main { margin: 0 3vw; }
     border: solid 1px #F2F2F2;
     background-color: #0065FC;
     border-radius: 0 0.9vw 0.9vw 0;
-    font-weight: 800;
+    font-size: 1vw;
+    font-weight: 600;
     padding: 0 1.2vw;
 }
 
@@ -153,7 +162,7 @@ main { margin: 0 3vw; }
     right: 1.5vw;
     margin: 0;
     padding: 0 1.5vw 0 2.5vw;
-    border: solid 3px #F2F2F2;
+    border: solid 0.3vw #F2F2F2;
     border-radius: 0 1.5vw 1.5vw 0;
     border-left: none;
     font-weight: 800;
@@ -175,6 +184,9 @@ main { margin: 0 3vw; }
 
 #locate-info-bubble
 {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-top: 0.85vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,14 +194,13 @@ main { margin: 0 3vw; }
 
 #locate-info-bubble i
 {
-    width: 1.5vw;
-    height: 1.5vw;
-    margin-right: 1vw;
-    padding:  0.1vw 0 0 0.5vw;
-    border: solid 2px #F2F2F2;
+    padding: 0.3vw 0.6vw;
+    border: solid 0.15vw #F2F2F2;
     color: #0065FC;
     border-radius: 1.5vw;
 }
+
+#locate-info-p { margin-left: 1vw; }
 
 /* Common properties */
 
@@ -303,7 +314,7 @@ main { margin: 0 3vw; }
 
 #lodging-card-holder .card
 {
-    flex: 0 32%;
+    flex: 0 31%;
     height: 16vw;
     margin-bottom: 2vw;
 }
@@ -464,14 +475,14 @@ footer
 {
     width: max-content;
     list-style: none;
-    margin-bottom: 1vw;
+    margin-bottom: 0.6vw;
 }
 
-.footer-link{
+.footer-link
+{
     color: black;
     text-decoration: none;
 }
-
 
 .box /* IE/Opera */
 {

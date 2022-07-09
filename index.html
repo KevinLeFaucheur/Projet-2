@@ -10,9 +10,11 @@
             <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
 
             <!-- FontAwesome -->
             <script src="https://kit.fontawesome.com/aa9970f97f.js" crossorigin="anonymous"></script>
+            
         </head>
         
         <body>
@@ -23,8 +25,8 @@
                         <img src="./images/logo/logo.png" alt="logo">
                         <div id="nav-buttons">
                             <ul>
-                                <li><a href="#lodging"><p>Hébergements</p></a></li>
-                                <li><a href="#activities"><p>Activités</p></a></li>
+                                <a href="#lodging"><li><p>Hébergements</p></li></a>
+                                <a href="#activities"><li><p>Activités</p></li></a>
                             </ul>
                         </div>
                     </nav>
@@ -35,13 +37,15 @@
                     <!-- Recherche, Filtres -->
                     <section id="locate">
                         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                        <p>En plein centre ville ou en pleine nature</p>
+                        <p id="locate-p">En plein centre ville ou en pleine nature</p>
                         <div>
                             <form id="locate-form">
                             <!-- Locate form -->
                                 <div id="locate-form-icon"><i class="fa-solid fa-location-dot"></i></div>
                                 <input type="text" name="placeholder" placeholder="Marseille, France"/>
-                                <input id="value" type="button" value="Rechercher"/>
+                                <button id="value" type="button">Rechercher
+                                    
+                                </button>
                                 <input id="icon" type="button" value=" "/><span class="fa-solid fa-magnifying-glass"></span>
                             </form>
                         </div>
@@ -70,7 +74,7 @@
                         <div id="locate-info">
                             <!-- info bulle -->
                             <div id="locate-info-bubble"><i class="fa-solid fa-info"></i></div>
-                            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                            <p id="locate-info-p">Plus de 500 logements sont disponibles dans cette ville</p>
                         </div>
                     </section>
 
@@ -319,23 +323,23 @@
                     <div class="footer-element">
                         <h3>A propos</h3>
                         <ul>
-                            <li><a class="footer-link" href="#">Fonctionnement du site</a class="footer-link" href="#"></li>
-                            <li><a class="footer-link" href="#">Conditions générales de vente</a class="footer-link" href="#"></li>
-                            <li><a class="footer-link" href="#">Données et confidentialité</a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Fonctionnement du site</p></a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Conditions générales de vente</p></a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Données et confidentialité</p></a class="footer-link" href="#"></li>
                         </ul>
                     </div>
                     <div class="footer-element">
                         <h3>Nos hébergements</h3>
                         <ul>
-                            <li><a class="footer-link" href="#">Charte qualité</a class="footer-link" href="#"></li>
-                            <li><a class="footer-link" href="#">Soumettre votre hôtel</a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Charte qualité</p></a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Soumettre votre hôtel</p></a class="footer-link" href="#"></li>
                         </ul>
                     </div>
                     <div class="footer-element">
                         <h3>Assistance</h3>
                         <ul>
-                            <li><a class="footer-link" href="#">Centre d'aide</a class="footer-link" href="#"></li>
-                            <li><a class="footer-link" href="#">Nous contacter</a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Centre d'aide</p></a class="footer-link" href="#"></li>
+                            <li><a class="footer-link" href="#"><p>Nous contacter</p></a class="footer-link" href="#"></li>
                         </ul>
                     </div>
                 </footer>
