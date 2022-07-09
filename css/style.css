@@ -79,6 +79,11 @@ main { margin: 0 3vw; }
     height: 3.2vw;
 }
 
+#locate-form-icon, #locate-form input, #locate-form button
+{
+    display: inline-block;
+}
+
 #locate-form-icon
 {
     width: 3.2vw;
@@ -158,6 +163,7 @@ main { margin: 0 3vw; }
 
 .locate-filter-item p
 {
+    /* display: inline-block; */
     position: relative;
     right: 1.5vw;
     margin: 0;
@@ -461,15 +467,9 @@ footer
     padding: 1vw 3vw 0 3vw;
 }
 
-.footer-element
-{
-    margin-right: 25%;
-}
+.footer-element { margin-right: 25%; }
 
-.footer-element ul
-{
-    padding: 0;
-}
+.footer-element ul { padding: 0; }
 
 .footer-element li
 {
@@ -497,7 +497,68 @@ footer
 /* Tablettes */
 @media screen and (max-width: 992px) and (min-width: 768px)
 {
+    h1 { font-size: 2vw; }
+    h2 { font-size: 1.5vw; }
+    h3 { font-size: 1.5vw; }
+    p { font-size: 1.5vw; }
+    i { font-size: 1.5vw;}
+
+    #top-half-block { flex-direction: column; }
+
+    .card-review i { font-size: 1.1vw; }
+
+    #locate-form { height: 4.5vw; }
+
+    #locate-form-icon
+    {
+        flex-grow: 0;
+        border-radius: 1.1vw 0 0 1.1vw;
+    }
+
+    #locate-form #value, #locate-form input { font-size: 1.5vw; }
+
+    #locate-form button
+    {
+        flex-grow: 0;
+        border-radius: 1.1vw 0 0 1.1vw;
+    }
+
+    #locate-form input { width: 25vw; }
+
+    .locate-filter-item { height: 5vw; }
+
+    .locate-filter-icon { width: 5vw; }
+
+    .locate-filter-item p 
+    {
+        line-height: 4.5vw;
+        border-radius: 0 3vw 3vw 0;
+    }
+
+    #locate-info-bubble  { height: 3vw; }
+
+    #popularity
+    {
+        order: -1;
+        margin-bottom: 2vw;
+    }
+
+    #popularity-card-holder
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #popularity-card-holder .card { width: 31%; }
+
+    #popularity-card-holder .card-body  { width: 16vw; }
+
+    #lodging, #popularity { width: 100%; }
+
+    #activities-card-holder h3 { font-size: 1.225vw; }
     
+    .footer-element { margin-right: 15vw; }
 }
 
 /* Mobiles */
@@ -509,10 +570,7 @@ footer
     p { font-size: 4vw; }
     i { font-size: 3vw;}
 
-    main
-    {
-        margin: 0;
-    }
+    main { margin: 0; }
 
     nav, #top-half-block, #locate-filters-block, #lodging-card-holder, #activities, footer
     {
@@ -704,13 +762,9 @@ footer
         padding: 1vw;
     }   
 
-    #lodging, #popularity
-    {
-        width: 100%;
-    }
-
     #popularity
     {
+        width: 100%;
         order: -1;
         border-radius: 0;
     }
