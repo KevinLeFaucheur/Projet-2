@@ -160,17 +160,30 @@ main { margin: 0 3vw; }
     display: flex;
     height: 3vw;
     margin-right: 1vw;
+    border: solid 2px #F2F2F2;
+    border-radius: 1.5vw;
+}
+
+.locate-filter-item:hover
+{
+    background-color: #DEEBFF;
+    border: solid 2px #DEEBFF;
+    transition: ease-in-out .3s;
+    cursor:pointer;
 }
 
 .locate-filter-icon
 {
+    position: relative;
+    bottom: 2px;
     width: 3vw;
+    height: 3vw;
     background-color: #DEEBFF;
-    border-radius: 50%;
+    border: solid 2px #DEEBFF;
+    border-radius: 1.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
 .locate-filter-item i
@@ -180,24 +193,13 @@ main { margin: 0 3vw; }
 
 .locate-filter-item p
 {
-    position: relative;
-    right: 1.5vw;
-    margin: 0;
-    padding: 0 1.5vw 0 2.5vw;
-    border: solid 0.3vw #F2F2F2;
-    border-radius: 0 1.5vw 1.5vw 0;
-    border-left: none;
+    justify-content: center;
+    align-self: center;
+    height: 3vw;
     font-weight: 800;
-    line-height: 2.5vw;
-}
-
-.locate-filter-item p:hover
-{
-    background-color: #DEEBFF;
-    border: solid 0.3vw #DEEBFF;
-    padding-left: 2.2vw;
-    transition: ease-out .3s;
-    cursor:pointer;
+    line-height: 3vw;
+    padding: 0 1vw;
+    width: auto;
 }
 
 #locate-info
@@ -439,7 +441,6 @@ main { margin: 0 3vw; }
 {
     flex-direction: column;
     width: 22%;
-    height: 45%;
     padding: 0;
 }
 
@@ -447,12 +448,15 @@ main { margin: 0 3vw; }
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    height: 100%;
 }
 
 #activities-card-holder .card-title
 {
-    height: 4vw;
+    height: 4.5vw;
+    flex-shrink: 0;
+    flex-grow: 0;
     display: flex;
     align-items: center;
 }
@@ -464,7 +468,7 @@ main { margin: 0 3vw; }
 
 #activities-card-holder .card-image
 {
-    height: 71%;
+    height: calc(100% - 4.5vw);
 }
 
 #activities-card-holder img
@@ -472,6 +476,10 @@ main { margin: 0 3vw; }
     height: 100%;
     object-fit:cover;
 }
+
+#activities-card-holder .card:nth-child(3n-1) { height: 53%; }
+
+#activities-card-holder .card:nth-child(3n) { height: 38%; }
 
 #activities-card-holder .card:nth-child(3n-2) { height: 100%; }
 
@@ -530,6 +538,7 @@ footer
 
     #locate-form-icon
     {
+        width: 4.2vw;
         flex-grow: 0;
         border-radius: 1.1vw 0 0 1.1vw;
     }
@@ -544,14 +553,53 @@ footer
 
     #locate-form input { width: 25vw; }
 
-    .locate-filter-item { height: 5vw; }
+    #locate-filters-block
+    {
+        flex-direction: column;
+    }
 
-    .locate-filter-icon { width: 5vw; }
+    #locate-filters-block h3
+    {
+        font-size: 2vw;
+    }
+
+    #locate-filters
+    {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .locate-filter-item 
+    { 
+        /* width: fit-content; */
+        height: 5vw; 
+        border-radius: 2.5vw;
+        margin-bottom: 1.5vw;
+        border: solid 3px #F2F2F2;
+    }
+
+    .locate-filter-icon 
+    { 
+        height: 5vw; 
+        width: 5vw; 
+        border-radius: 2.5vw;
+        border: solid 3px #DEEBFF;
+        bottom: 3px;
+        right: 3px;
+    }
+
+    .locate-filter-item:hover
+    {
+        border: solid 3px #DEEBFF;
+    }
 
     .locate-filter-item p 
     {
-        line-height: 4.5vw;
-        border-radius: 0 3vw 3vw 0;
+        justify-content: center;
+        align-self: center;
+        font-size: 2vw;
+        padding: 0 2.5vw 0 1.3vw;
     }
 
     #locate-info-bubble  { height: 3vw; }
@@ -583,7 +631,12 @@ footer
 /* Mobiles */
 @media screen and (max-width: 768px) 
 {
-    h1 { font-size: 6vw; }
+    h1 
+    { 
+        margin: 8vw 0 6vw 0;
+        font-size: 6vw; 
+    }
+
     h2 { font-size: 5vw; }
     h3 { font-size: 4vw; }
     p { font-size: 4vw; }
@@ -606,6 +659,7 @@ footer
     {
         width: 25%;
         height: 25%;
+        margin: 3vw 0 0 4vw;
     }
 
     nav #nav-buttons { align-self: stretch; }
@@ -645,13 +699,13 @@ footer
 
     .card
     {
-        border-radius: 4vw;
-        padding: 1vw;
+        border-radius: 40px;
+        padding: 1.2vw;
     }
 
     .card-image img
     {
-        border-radius: 4vw;
+        border-radius: 30px;
         height: 100%;
     }
 
@@ -734,39 +788,37 @@ footer
     {
         width: fit-content;
         height: 13vw;
-        margin-bottom: 2%;
+        margin-bottom: 3vw;
+        border: solid 4px #F2F2F2;
+        border-radius: 6.5vw;
+    }
+
+    .locate-filter-item:hover
+    {
+        border: solid 4px #DEEBFF;
     }
 
     .locate-filter-icon
     {
+        height: 13vw;
         width: 13vw;
-        border-radius: 10vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        border-radius: 13vw;
+        border: solid 4px #DEEBFF;
+        bottom: 4px;
+        right: 4px;
     }
 
     .locate-filter-icon i
     {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .locate-filter-item p
     { 
+        justify-content: center;
+        align-self: center;
         font-size: 3.5vw;
-        line-height: 11vw;
-        position: relative;
-        right: 5vw;
-        text-align: justify;
-        padding: 0 5vw 0 7vw;
-        border: solid 0.6vw #F2F2F2;
-        border-radius: 0 10vw 10vw 0;
-        border-left: none;
-    }
-
-    .locate-filter-item p:hover
-    {
-        padding-left: 7vw;
+        padding: 0 4.5vw 0 3.3vw;
     }
 
     #locate-info-bubble
@@ -793,7 +845,11 @@ footer
         border-radius: 0;
     }
 
-    #popularity-icon { font-size: 5vw; }
+    #popularity-icon i 
+    { 
+        align-self: baseline;
+        font-size: 5vw; 
+    }
 
     #popularity-card-holder .card
     {
@@ -827,7 +883,7 @@ footer
     {
         width: 100%;
         height: 100%;
-        border-radius: 4vw 0 0 4vw;
+        border-radius: 34px 0 0 34px;
     }
 
     #lodging
@@ -852,7 +908,7 @@ footer
     #lodging .card-image img
     {
         height: 100%;
-        border-radius: 4vw 4vw 0 0;
+        border-radius: 34px 34px 0 0;
         object-fit: cover;
     }
 
@@ -872,33 +928,31 @@ footer
         height: auto;
     }
 
-    #activities-card-holder .card, #activities-card-holder .card:nth-child(3n-2)
+    #activities-card-holder .card:nth-child(n)
     {
         width: 100%;
         height: 48vw;
-        margin-bottom: 4vw;
+        margin-bottom: 6vw;
     }
 
-    #activities-card-holder .card-body
+    #activities-card-holder .card-title
     {
-        flex-shrink: 0;
-        display: flex;
-        justify-content: center;
+        height: 13vw;
     }
 
     #activities-card-holder .card-title h3
     {
-        margin: 0 0 0 3vw;
+        padding-left: 5vw;
     }
 
     #activities-card-holder .card:nth-child(n) .card-image
     {
-        height: 34vw;
+        height: calc(100% - 13vw);
     }
 
     #activities-card-holder .card-image img
     {
-        border-radius: 4vw 4vw 0 0;
+        border-radius: 40px 40px 0 0;
         object-fit: cover;
     }
 
