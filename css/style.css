@@ -496,6 +496,11 @@ footer
 }
 
 /* Tablettes */
+
+/*      Selon cette page, pour augmenter la précision des valueurs comparées,
+        768.01px devrait réduire considérablement qu'un appareil tombe
+        entre 768.01px et 768px */
+/*      https://www.w3.org/TR/mediaqueries-4/#mq-min-max */
 @media screen and (max-width: 992px) and (min-width: 768.01px)
 {
     h1 { font-size: 2vw; }
