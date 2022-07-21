@@ -496,7 +496,7 @@ footer
 }
 
 /* Tablettes */
-@media screen and (max-width: 992px) and (min-width: 769px)
+@media screen and (max-width: 992px) and (min-width: 768.01px)
 {
     h1 { font-size: 2vw; }
     h2 { font-size: 1.5vw; }
@@ -658,6 +658,11 @@ footer
     {
         border-top: 0;
         border-bottom: solid 5px #F2F2F2;
+    }
+
+    .li-link:active
+    {
+        color: #0065FC;
     }
 
     .li-link:hover
